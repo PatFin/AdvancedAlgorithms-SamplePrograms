@@ -16,7 +16,7 @@
 typedef struct balloon {
 	int time;
 	int pos;
-} balloon_t, * balloon_tp;
+} balloon_t;
 
 /*
  * 結果 struct
@@ -25,7 +25,7 @@ typedef struct balloon {
 typedef struct result {
 	int isOK;
 	int num;
-} result_t, *result_tp;
+} result_t;
 
 /* 風船の配列 Balloon array */
 balloon_t balloons[MAX_BALLOONS];
@@ -53,7 +53,9 @@ void setupBalloons(FILE * in, int n) {
  */
 result_t solve(int n) {
   /* TODO */
-	result_t result = { true, 0 };
+
+	result_t result = { true, 42 }; /* 全ての風船を回収出来た，かかった距離は42 */
+  // result_t result = {false, 3};/* 風船3個目は回収不能でした */
 	return result;
 }
 
